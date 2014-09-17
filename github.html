@@ -11,24 +11,26 @@
       <button type='submit'>Load profile</button>
     </form>
 
-    <main class='profile-container'>
-      <article class='profile'>
-        <section class='pic'>
-          <img src='http://www.url_of_user_github_avator.com'>
-        </section>
-
-        <section class='statistics'>
-          <h3>
-            <a href='www.link_to_user_github_account.com'>
-              Github username
-            </a>
-          </h3>
-          <strong>(number of repos)</strong>
-          <strong>(number of followers)</strong>
-        </section>
-        <br clear='all'>
-      </article>
+    <main class="profile-container">
     </main>
+      <template id="profile-template">
+        <article class="profile">
+          <section class="pic">
+            <img src={{avatar_url}}>
+          </section>
+
+          <section class='statistics'>
+            <h3>
+              <a href={{login}}>
+                {{login}}
+              </a>
+            </h3>
+            <strong>{{public_repos}}</strong>
+            <strong>{{followers}}</strong>
+          </section>
+          <br clear='all'>
+        </article>
+      </template>
     <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
     <script src='interface.js'></script>
   </body>
