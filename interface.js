@@ -6,7 +6,7 @@ $(document).ready(function(){
     $.get(url, function(user) {
       var template = $('template').html();
       var html = Mustache.render(template, user);
-      $('#profile-container').append(html);
+      $('.profile-container').append(html);
       console.log(html);
     }).fail(function(){
       alert('Could not find user.');
